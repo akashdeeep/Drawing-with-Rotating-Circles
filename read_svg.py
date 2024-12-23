@@ -51,7 +51,7 @@ def sample_svg_points(svg_file, step=0.005):
             x, y = point.real, point.imag
             points.append((x, y))
 
-    points = trim_points(points, 1000)
+    points = trim_points(points, 2500)
     points = np.array(points)  # Convert to NumPy array for KD-Tree
     # print(len(points))
     tree = cKDTree(points)  # Build a KD-Tree for fast nearest neighbor search

@@ -192,13 +192,13 @@ def main():
     #     angular_frequencies=[0, 1, -1, 2, -2],
     # )
 
-    svg_file = "Pi-symbol.svg"
+    svg_file = "github-mark-white.svg"
 
-    points = read_svg.get_points(1000, svg_file)
+    points = read_svg.get_points(2500, svg_file)
 
-    coefficients = cal_coefficients.get_coefficients(points, 500)
+    coefficients = cal_coefficients.get_coefficients(points, 800)
     coefficients[0] = 0
-    angular_frequencies = cal_coefficients.get_angular_frequencies(500)
+    angular_frequencies = cal_coefficients.get_angular_frequencies(800)
 
     # print(coefficients[:10])
     # print(angular_frequencies[:10])
@@ -233,7 +233,7 @@ def main():
         figure.draw(screen)
 
         pygame.display.flip()
-        clock.tick(60)
+        clock.tick(165)
 
 
 if __name__ == "__main__":
