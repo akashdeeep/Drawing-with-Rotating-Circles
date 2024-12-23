@@ -4,6 +4,12 @@ This project visualizes 2D graphics using Fourier transforms. It animates a seri
 
 ---
 
+## Demo
+
+Watch the GitHub logo being rendered using Fourier transforms:
+
+[![GitHub Logo Render](https://img.youtube.com/vi/NyPIr30Dy0A/0.jpg)](https://www.youtube.com/shorts/NyPIr30Dy0A)
+
 ## Features
 
 - **Fourier Transformation:** Decomposes 2D points into Fourier coefficients and uses them to animate graphics.
