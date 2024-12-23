@@ -69,11 +69,10 @@ Watch the GitHub logo being rendered using Fourier transforms:
 ## Configuration
 
 ```python
-# conf.py
-size = 10
-width = 990
-height = 1320
-grid_size = 400
+size = 10 #multiply the size of rendered animation
+width = 990 #width of pygame window
+height = 1320 #height of pygame window
+grid_size = 400 #grid size
 ```
 
 ---
