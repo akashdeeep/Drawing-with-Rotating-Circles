@@ -192,7 +192,7 @@ def main():
     #     angular_frequencies=[0, 1, -1, 2, -2],
     # )
 
-    svg_file = "icons8-homer-simpson-500.svg"
+    svg_file = "Pi-symbol.svg"
 
     points = read_svg.get_points(1000, svg_file)
 

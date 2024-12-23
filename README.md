@@ -30,7 +30,7 @@ This project visualizes 2D graphics using Fourier transforms. It animates a seri
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/fourier-graphics-renderer.git
+   git clone git@github.com:akashdeeep/Fourier-Graphics-Renderer.git
    cd fourier-graphics-renderer
    ```
 
@@ -62,25 +62,13 @@ This project visualizes 2D graphics using Fourier transforms. It animates a seri
 
 ## Configuration
 
-The project can be customized using the `conf` dictionary in `main.py`. Key options include:
-
-- **SVG Path:**
-
-  ```python
-  conf['svg_path'] = "input.svg"
-  ```
-
-- **Number of Fourier Coefficients:**
-
-  ```python
-  conf['n_coefficients'] = 100
-  ```
-
-- **Animation Settings:**
-  ```python
-  conf['fps'] = 60
-  conf['canvas_size'] = (800, 800)
-  ```
+```python
+# conf.py
+size = 10
+width = 990
+height = 1320
+grid_size = 400
+```
 
 ---
 
@@ -89,9 +77,8 @@ The project can be customized using the `conf` dictionary in `main.py`. Key opti
 ```
 .
 ├── main.py                # Entry point for the application
-├── fourier.py             # Fourier computation and related utilities
-├── svg_handler.py         # Functions for parsing and sampling SVG paths
-├── renderer.py            # Visualization and animation logic using pygame
+├── read_svg.py            # Utility to read the svg file
+├── cal_coefficients.py    # Functions for parsing and sampling SVG paths
 ├── requirements.txt       # Python dependencies
 ├── README.md              # Documentation
 └── input.svg              # Example SVG file
@@ -105,12 +92,12 @@ This project requires Python 3.7+ and the following libraries:
 
 - `pygame`: For rendering and animation.
 - `numpy`: For numerical computations.
-- `svg.path`: For parsing SVG files.
+- `svgpathtools`: For parsing SVG files.
 
 Install them using:
 
 ```bash
-pip install pygame numpy svg.path
+pip install pygame numpy svgpathtools
 ```
 
 ---
@@ -120,7 +107,6 @@ pip install pygame numpy svg.path
 - **Adaptive Sampling:** Automatically adjust the sampling density based on SVG path complexity.
 - **Performance Optimization:** Cache Fourier coefficients and enable multi-threaded rendering.
 - **GUI Integration:** Add a user interface for loading SVG files and adjusting settings dynamically.
-- **3D Visualization:** Extend functionality to support 3D shapes and animations.
 
 ---
 
